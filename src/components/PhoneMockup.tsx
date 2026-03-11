@@ -1,6 +1,9 @@
 import React from 'react';
+import { useLang } from '@/contexts/LangContext';
 
 const PhoneMockup: React.FC = () => {
+  const { t, lang } = useLang();
+
   return (
     <div className="relative">
       {/* Glow behind phone */}
@@ -29,8 +32,8 @@ const PhoneMockup: React.FC = () => {
         {/* Content */}
         <div className="px-4 pb-4 space-y-3">
           {/* Greeting */}
-          <p className="font-arabic-ui text-right text-foreground text-sm">
-            السلام عليكم، أخي 👋
+          <p className={`font-arabic-ui text-foreground text-sm ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
+            {t('Assalamu Alaikum, brother 👋', 'السلام عليكم، أخي 👋')}
           </p>
 
           {/* Journey card */}
@@ -40,9 +43,15 @@ const PhoneMockup: React.FC = () => {
               background: 'linear-gradient(135deg, hsl(var(--noorly-blue)), hsl(217 91% 45%))',
             }}
           >
-            <p className="text-xs text-foreground/80">📖 Day 7 of 60</p>
-            <p className="font-bold text-foreground text-sm">The Meaning of Iman</p>
-            <p className="font-amiri text-noorly-gold text-sm text-right">معنى الإيمان</p>
+            <p className="text-xs text-foreground/80">
+              {t('📖 Day 7 of 60', '📖 اليوم ٧ من ٦٠')}
+            </p>
+            <p className="font-bold text-foreground text-sm">
+              {t('The Meaning of Iman', 'معنى الإيمان')}
+            </p>
+            {lang === 'ar' && (
+              <p className="font-amiri text-noorly-gold text-sm text-right">معنى الإيمان</p>
+            )}
             {/* Progress bar */}
             <div className="w-full h-1.5 bg-foreground/20 rounded-full overflow-hidden">
               <div
@@ -58,11 +67,21 @@ const PhoneMockup: React.FC = () => {
 
           {/* Verse card */}
           <div className="rounded-2xl p-4 bg-noorly-surface-2 border-l-2 border-noorly-purple space-y-2">
-            <p className="text-xs text-noorly-purple font-medium">✦ إلهام اليوم</p>
-            <p className="font-amiri text-foreground text-sm leading-[2] text-right" dir="rtl">
-              إِنَّمَا الْمُؤْمِنُونَ الَّذِينَ إِذَا ذُكِرَ اللَّهُ وَجِلَتْ قُلُوبُهُمْ
+            <p className="text-xs text-noorly-purple font-medium">
+              {t('✦ Today\'s Inspiration', '✦ إلهام اليوم')}
             </p>
-            <p className="text-[10px] text-noorly-text-3 text-right">سورة الأنفال 8:2</p>
+            {lang === 'en' ? (
+              <p className="text-foreground text-sm leading-relaxed italic">
+                "The believers are only those who, when Allah is mentioned, their hearts become fearful..."
+              </p>
+            ) : (
+              <p className="font-amiri text-foreground text-sm leading-[2] text-right" dir="rtl">
+                إِنَّمَا الْمُؤْمِنُونَ الَّذِينَ إِذَا ذُكِرَ اللَّهُ وَجِلَتْ قُلُوبُهُمْ
+              </p>
+            )}
+            <p className={`text-[10px] text-noorly-text-3 ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
+              {t('Surah Al-Anfal 8:2', 'سورة الأنفال 8:2')}
+            </p>
           </div>
 
           {/* Bottom nav */}

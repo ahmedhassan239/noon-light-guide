@@ -10,8 +10,9 @@ const Footer: React.FC = () => {
         {/* Logo */}
         <div className="flex items-center gap-2">
           <span>🌙</span>
-          <span className="font-body font-bold text-foreground">NooRly</span>
-          <span className="font-amiri text-noorly-gold">نورلي</span>
+          <span className="font-body font-bold text-foreground">
+            {t('NooRly', 'نورلي')}
+          </span>
         </div>
 
         {/* Links */}
