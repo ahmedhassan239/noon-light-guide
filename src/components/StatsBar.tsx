@@ -3,7 +3,7 @@ import { useLang } from '@/contexts/LangContext';
 import { useCountUp } from '@/hooks/useScrollReveal';
 
 const StatItem: React.FC<{ value: number; label: string; arLabel: string }> = ({ value, label, arLabel }) => {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const numRef = useRef<HTMLSpanElement>(null);
   useCountUp(numRef as React.RefObject<HTMLElement>, value);
 
@@ -13,7 +13,6 @@ const StatItem: React.FC<{ value: number; label: string; arLabel: string }> = ({
         0
       </span>
       <span className="text-noorly-text-2 text-sm">{t(label, arLabel)}</span>
-      <span className="font-amiri text-noorly-gold text-sm opacity-70">{arLabel}</span>
     </div>
   );
 };

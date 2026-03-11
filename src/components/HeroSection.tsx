@@ -3,7 +3,7 @@ import { useLang } from '@/contexts/LangContext';
 import PhoneMockup from './PhoneMockup';
 
 const HeroSection: React.FC = () => {
-  const { t } = useLang();
+  const { t, lang } = useLang();
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-20 pb-12 geometric-pattern overflow-hidden">
@@ -23,14 +23,16 @@ const HeroSection: React.FC = () => {
           </span>
         </div>
 
-        {/* Arabic subtitle */}
-        <p
-          className="font-amiri text-noorly-gold text-xl md:text-2xl"
-          style={{ animation: 'fadeUp 0.8s 0.1s ease both' }}
-          dir="rtl"
-        >
-          رفيق المسلمين الجدد
-        </p>
+        {/* Arabic subtitle - only in EN mode as decorative brand element */}
+        {lang === 'en' && (
+          <p
+            className="font-amiri text-noorly-gold text-xl md:text-2xl"
+            style={{ animation: 'fadeUp 0.8s 0.1s ease both' }}
+            dir="rtl"
+          >
+            رفيق المسلمين الجدد
+          </p>
+        )}
 
         {/* Main headline */}
         <h1
@@ -67,7 +69,6 @@ const HeroSection: React.FC = () => {
           <a
             href="#download"
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-base font-medium bg-noorly-coral text-foreground rounded-pill transition-all duration-200 hover:scale-[1.04]"
-            style={{ position: 'relative' }}
           >
             <span>🌙</span> {t('Start Your Journey', 'ابدأ رحلتك')}
           </a>

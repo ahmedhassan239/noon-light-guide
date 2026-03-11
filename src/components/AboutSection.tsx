@@ -2,7 +2,7 @@ import React from 'react';
 import { useLang } from '@/contexts/LangContext';
 
 const AboutSection: React.FC = () => {
-  const { t } = useLang();
+  const { t, lang } = useLang();
 
   return (
     <section id="about" className="relative z-10 py-[120px] px-6 md:px-12 geometric-pattern">
@@ -19,8 +19,6 @@ const AboutSection: React.FC = () => {
             <span className="text-noorly-blue">{t('We make it simple.', 'نحن نبسّطه.')}</span>
           </h2>
 
-          <p className="font-amiri text-noorly-gold text-lg italic" dir="rtl">حول نورلي</p>
-
           <p className="text-noorly-text-2 leading-relaxed">
             {t(
               'When you first accept Islam, you\'re handed a universe of knowledge — prayers, fasting, Quran, theology, community, and more. It\'s beautiful, but overwhelming. NooRly was built to guide you through that first chapter gently, day by day.',
@@ -35,12 +33,23 @@ const AboutSection: React.FC = () => {
             )}
           </p>
 
-          {/* Quran quote */}
+          {/* Quran quote - language-separated */}
           <blockquote className="border-s-[3px] border-noorly-gold ps-5 space-y-2">
-            <p className="font-amiri text-noorly-gold text-lg leading-[2.2]" dir="rtl">
-              قُلْ يَا عِبَادِيَ الَّذِينَ أَسْرَفُوا عَلَىٰ أَنفُسِهِمْ لَا تَقْنَطُوا مِن رَّحْمَةِ اللَّهِ
-            </p>
-            <p className="text-noorly-text-3 text-sm font-amiri" dir="rtl">— سورة الزمر 39:53</p>
+            {lang === 'en' ? (
+              <>
+                <p className="text-noorly-gold text-base italic leading-relaxed">
+                  "Say, 'O My servants who have transgressed against themselves, do not despair of the mercy of Allah. Indeed, Allah forgives all sins. Indeed, it is He who is the Forgiving, the Merciful.'"
+                </p>
+                <p className="text-noorly-text-3 text-sm">— Surah Az-Zumar 39:53 (Saheeh International)</p>
+              </>
+            ) : (
+              <>
+                <p className="font-amiri text-noorly-gold text-lg leading-[2.2]" dir="rtl">
+                  قُلْ يَا عِبَادِيَ الَّذِينَ أَسْرَفُوا عَلَىٰ أَنفُسِهِمْ لَا تَقْنَطُوا مِن رَّحْمَةِ اللَّهِ ۚ إِنَّ اللَّهَ يَغْفِرُ الذُّنُوبَ جَمِيعًا ۚ إِنَّهُ هُوَ الْغَفُورُ الرَّحِيمُ
+                </p>
+                <p className="text-noorly-text-3 text-sm font-amiri" dir="rtl">— سورة الزمر 39:53</p>
+              </>
+            )}
           </blockquote>
 
           <p className="text-noorly-text-2 text-sm italic">
