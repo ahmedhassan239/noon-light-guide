@@ -69,13 +69,13 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Public Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   [dir="rtl"] body {
-    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-family: 'Cairo', sans-serif;
   }
 }
 
@@ -85,11 +85,11 @@
 }
 
 .font-arabic-ui {
-  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  font-family: 'Cairo', sans-serif;
 }
 
 .font-body {
-  font-family: 'Public Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
 }
 
 /* Star twinkling */

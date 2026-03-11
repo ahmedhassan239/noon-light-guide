@@ -97,7 +97,6 @@ const FeaturesSection: React.FC = () => {
             <br />
             <span className="text-noorly-blue">{t('All in one place.', 'في مكان واحد.')}</span>
           </h2>
-          <p className="font-amiri text-noorly-gold text-lg italic" dir="rtl">المميزات</p>
         </div>
 
         {/* Grid */}
@@ -128,7 +127,6 @@ const FeaturesSection: React.FC = () => {
                 {f.icon}
               </div>
               <h3 className="font-body font-semibold text-foreground text-lg">{t(f.en, f.ar)}</h3>
-              <p className="font-amiri text-noorly-gold text-sm mt-1" dir="rtl">{f.ar}</p>
               <p className="text-noorly-text-2 text-sm mt-3 leading-relaxed">{t(f.descEn, f.descAr)}</p>
             </div>
           ))}

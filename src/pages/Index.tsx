@@ -5,6 +5,7 @@ import HeroSection from '@/components/HeroSection';
 import StatsBar from '@/components/StatsBar';
 import AboutSection from '@/components/AboutSection';
 import FeaturesSection from '@/components/FeaturesSection';
+import SeasonalSection from '@/components/SeasonalSection';
 import JourneyTimeline from '@/components/JourneyTimeline';
 import HelpSection from '@/components/HelpSection';
 import DownloadSection from '@/components/DownloadSection';
@@ -44,6 +45,8 @@ const Index: React.FC = () => {
       <AboutSection />
       <IslamicDivider />
       <FeaturesSection />
+      <IslamicDivider />
+      <SeasonalSection />
       <IslamicDivider />
       <JourneyTimeline />
       <IslamicDivider />

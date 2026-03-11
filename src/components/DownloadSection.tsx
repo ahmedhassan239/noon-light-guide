@@ -13,7 +13,7 @@ const DownloadSection: React.FC = () => {
       />
 
       <div className="max-w-noorly mx-auto text-center space-y-10 relative z-10">
-        {/* Bismillah */}
+        {/* Bismillah - always Arabic */}
         <p className="font-amiri text-noorly-gold text-3xl" dir="rtl">
           بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
         </p>
@@ -24,8 +24,6 @@ const DownloadSection: React.FC = () => {
           <span className="text-noorly-coral">NooRly</span>
           {t(' today.', ' اليوم.')}
         </h2>
-
-        <p className="font-amiri text-noorly-gold text-lg italic" dir="rtl">ابدأ رحلتك</p>
 
         <p className="text-noorly-text-2 text-lg max-w-md mx-auto scroll-reveal">
           {t(

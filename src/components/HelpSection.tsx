@@ -47,7 +47,6 @@ const HelpSection: React.FC = () => {
             {t('"If You Need Help Now" — ', '"إذا احتجت مساعدة الآن" — ')}
             <span className="text-noorly-green">{t('We\'re here.', 'نحن هنا.')}</span>
           </h2>
-          <p className="font-amiri text-noorly-gold text-lg italic" dir="rtl">الدعم</p>
           <p className="text-noorly-text-2 max-w-xl mx-auto">
             {t(
               'Most apps don\'t talk about the hard parts. NooRly does. Because real support means showing up when things feel impossible.',

@@ -67,7 +67,6 @@ const JourneyTimeline: React.FC = () => {
             {t('Your journey, ', 'رحلتك، ')}
             <span className="text-noorly-coral">{t('beautifully mapped.', 'مرسومة بجمال.')}</span>
           </h2>
-          <p className="font-amiri text-noorly-gold text-lg italic" dir="rtl">الرحلة</p>
         </div>
 
         {/* Timeline */}
@@ -106,7 +105,6 @@ const JourneyTimeline: React.FC = () => {
                       <h3 className="font-body font-bold text-foreground text-xl mt-2">
                         {t(item.titleEn, item.titleAr)}
                       </h3>
-                      <p className="font-amiri text-noorly-gold text-sm mt-1" dir="rtl">{item.titleAr}</p>
                       <p className="text-noorly-text-2 text-sm mt-3 leading-relaxed">
                         {t(item.descEn, item.descAr)}
                       </p>
