@@ -81,8 +81,8 @@ export default {
       },
       fontFamily: {
         amiri: ["Amiri", "serif"],
-        "arabic-ui": ["IBM Plex Sans Arabic", "sans-serif"],
-        body: ["Public Sans", "sans-serif"],
+        "arabic-ui": ["Cairo", "sans-serif"],
+        body: ["DM Sans", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {
