@@ -207,7 +207,14 @@ const JourneyTimeline: React.FC = () => {
           </div>
 
           {/* End marker */}
-          <div className="flex flex-col items-center mt-16 scroll-reveal">
+          <div className="flex flex-col items-center mt-20 scroll-reveal">
+            {/* Decorative prayer beads */}
+            <div className="flex items-center gap-3 mb-6">
+              <div className="h-px w-16 bg-gradient-to-r from-transparent to-noorly-gold/40" />
+              <span className="text-2xl animate-float">📿</span>
+              <div className="h-px w-16 bg-gradient-to-l from-transparent to-noorly-gold/40" />
+            </div>
+
             <div className="relative group">
               {/* Outer glow rings */}
               <div
@@ -228,21 +235,21 @@ const JourneyTimeline: React.FC = () => {
 
               {/* Main circle */}
               <div
-                className="relative w-20 h-20 rounded-full bg-noorly-surface border-2 border-noorly-gold flex items-center justify-center transition-transform duration-500 group-hover:scale-110"
+                className="relative w-24 h-24 rounded-full bg-noorly-surface border-2 border-noorly-gold flex items-center justify-center transition-transform duration-500 group-hover:scale-110"
                 style={{
-                  boxShadow: '0 0 32px hsl(var(--noorly-gold) / 0.5), inset 0 0 20px hsl(var(--noorly-gold) / 0.1)',
+                  boxShadow: '0 0 40px hsl(var(--noorly-gold) / 0.5), inset 0 0 24px hsl(var(--noorly-gold) / 0.1)',
                 }}
               >
-                <span className="text-3xl">☪️</span>
+                <span className="text-4xl">☪️</span>
               </div>
             </div>
 
             {/* Text */}
-            <div className="mt-6 text-center space-y-2">
-              <p className="font-body font-bold text-foreground text-lg">
-                {t('Your new life begins', 'حياتك الجديدة تبدأ')}
+            <div className="mt-8 text-center space-y-3">
+              <p className="font-body font-extrabold text-foreground text-xl tracking-tight">
+                {t('Your new life begins', 'حياتك الجديدة تبدأ')} <span className="inline-block">📿</span>
               </p>
-              <p className="text-noorly-text-3 text-sm max-w-xs">
+              <p className="text-noorly-text-2 text-sm max-w-sm mx-auto leading-relaxed">
                 {t(
                   'Day 60 is not the end — it\'s the beginning of a lifetime of faith.',
                   'اليوم الستون ليس النهاية — إنه بداية حياة كاملة من الإيمان.'
