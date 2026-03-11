@@ -6,8 +6,8 @@ const situations = [
     emoji: '💭',
     titleEn: 'Feeling Doubt About Islam',
     titleAr: 'الشعور بالشك حول الإسلام',
-    descEn: 'It\'s natural. Doubt isn\'t the opposite of faith — it\'s a part of the journey. We help you find clarity.',
-    descAr: 'هذا طبيعي. الشك ليس نقيض الإيمان — إنه جزء من الرحلة. نساعدك على إيجاد الوضوح.',
+    descEn: 'It\'s natural. Doubt isn\'t the opposite of faith. It\'s a part of the journey. We help you find clarity.',
+    descAr: 'هذا طبيعي. الشك ليس نقيض الإيمان. إنه جزء من الرحلة. نساعدك على إيجاد الوضوح.',
   },
   {
     emoji: '👨‍👩‍👧',
