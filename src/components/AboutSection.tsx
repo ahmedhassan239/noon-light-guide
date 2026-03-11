@@ -1,0 +1,91 @@
+import React from 'react';
+import { useLang } from '@/contexts/LangContext';
+
+const AboutSection: React.FC = () => {
+  const { t } = useLang();
+
+  return (
+    <section id="about" className="relative z-10 py-[120px] px-6 md:px-12 geometric-pattern">
+      <div className="max-w-noorly mx-auto grid md:grid-cols-2 gap-16 items-start">
+        {/* Text column */}
+        <div className="space-y-8 scroll-reveal">
+          <span className="text-noorly-coral text-sm font-medium tracking-wide">
+            {t('✦ About NooRly ✦', '✦ حول نورلي ✦')}
+          </span>
+
+          <h2 className="font-body font-extrabold text-foreground text-3xl md:text-4xl leading-tight">
+            {t('Islam is vast.', 'الإسلام واسع.')}
+            <br />
+            <span className="text-noorly-blue">{t('We make it simple.', 'نحن نبسّطه.')}</span>
+          </h2>
+
+          <p className="font-amiri text-noorly-gold text-lg italic" dir="rtl">حول نورلي</p>
+
+          <p className="text-noorly-text-2 leading-relaxed">
+            {t(
+              'When you first accept Islam, you\'re handed a universe of knowledge — prayers, fasting, Quran, theology, community, and more. It\'s beautiful, but overwhelming. NooRly was built to guide you through that first chapter gently, day by day.',
+              'عندما تقبل الإسلام لأول مرة، تُمنح عالمًا من المعرفة — الصلاة والصيام والقرآن والعقيدة والمجتمع والمزيد. إنه جميل، لكنه مُرهق. بُني نورلي ليرشدك خلال هذا الفصل الأول بلطف، يومًا بيوم.'
+            )}
+          </p>
+
+          <p className="text-noorly-text-2 leading-relaxed">
+            {t(
+              'No jargon. No judgment. Just a clear, structured path from Day 1 to Day 60 — with lessons, duas, Quran verses, and real human support for the moments when things feel hard.',
+              'بدون مصطلحات معقدة. بدون أحكام. مجرد مسار واضح ومنظم من اليوم الأول إلى اليوم الستين — مع دروس وأدعية وآيات قرآنية ودعم حقيقي للحظات الصعبة.'
+            )}
+          </p>
+
+          {/* Quran quote */}
+          <blockquote className="border-s-[3px] border-noorly-gold ps-5 space-y-2">
+            <p className="font-amiri text-noorly-gold text-lg leading-[2.2]" dir="rtl">
+              قُلْ يَا عِبَادِيَ الَّذِينَ أَسْرَفُوا عَلَىٰ أَنفُسِهِمْ لَا تَقْنَطُوا مِن رَّحْمَةِ اللَّهِ
+            </p>
+            <p className="text-noorly-text-3 text-sm font-amiri" dir="rtl">— سورة الزمر 39:53</p>
+          </blockquote>
+
+          <p className="text-noorly-text-2 text-sm italic">
+            {t(
+              'Think of it as your gentle guide into Islam — structured, supportive, and always by your side.',
+              'فكّر فيه كدليلك اللطيف إلى الإسلام — منظم وداعم ودائمًا بجانبك.'
+            )}
+          </p>
+        </div>
+
+        {/* Visual column - floating cards */}
+        <div className="relative h-[400px] hidden md:block scroll-reveal" data-delay="200">
+          <div
+            className="absolute top-0 right-0 w-64 rounded-lg p-6 border border-border bg-noorly-surface"
+            style={{ animation: 'cardFloat1 5s ease-in-out infinite' }}
+          >
+            <span className="text-2xl">🤲</span>
+            <h3 className="mt-3 font-body font-bold text-noorly-coral">{t('If You Need Help Now', 'إذا احتجت مساعدة الآن')}</h3>
+            <p className="mt-1 text-sm text-noorly-text-3">{t('Immediate spiritual support', 'دعم روحي فوري')}</p>
+          </div>
+
+          <div
+            className="absolute top-24 right-8 w-64 rounded-lg p-6 border border-border"
+            style={{
+              background: 'linear-gradient(135deg, hsl(var(--noorly-blue)), hsl(217 91% 45%))',
+              animation: 'cardFloat2 6s ease-in-out infinite',
+            }}
+          >
+            <span className="text-2xl">📖</span>
+            <h3 className="mt-3 font-body font-bold text-foreground">{t('60-Day Curriculum', 'منهج ٦٠ يومًا')}</h3>
+            <p className="mt-1 text-sm text-foreground/70">{t('Step by step learning', 'تعلم خطوة بخطوة')}</p>
+          </div>
+
+          <div
+            className="absolute top-48 right-4 w-64 rounded-lg p-6 border border-border bg-noorly-surface"
+            style={{ animation: 'cardFloat3 7s ease-in-out infinite' }}
+          >
+            <span className="text-2xl">✅</span>
+            <h3 className="mt-3 font-body font-bold text-noorly-green">{t('Your Progress', 'تقدمك')}</h3>
+            <p className="mt-1 text-sm text-noorly-text-3">{t('Track your growth', 'تتبع نموك')}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutSection;
