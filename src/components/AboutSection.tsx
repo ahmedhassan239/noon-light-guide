@@ -28,8 +28,8 @@ const AboutSection: React.FC = () => {
 
           <p className="text-noorly-text-2 leading-relaxed">
             {t(
-              'No jargon. No judgment. Just a clear, structured path from Day 1 to Day 60 — with lessons, duas, Quran verses, and real human support for the moments when things feel hard.',
-              'بدون مصطلحات معقدة. بدون أحكام. مجرد مسار واضح ومنظم من اليوم الأول إلى اليوم الستين — مع دروس وأدعية وآيات قرآنية ودعم حقيقي للحظات الصعبة.'
+              'No jargon. No judgment. Just a clear, structured path from Day 1 to Day 60, with lessons, duas, Quran verses, and real human support for the moments when things feel hard.',
+              'بدون مصطلحات معقدة. بدون أحكام. مجرد مسار واضح ومنظم من اليوم الأول إلى اليوم الستين، مع دروس وأدعية وآيات قرآنية ودعم حقيقي للحظات الصعبة.'
             )}
           </p>
 
