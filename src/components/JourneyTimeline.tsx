@@ -89,12 +89,12 @@ const JourneyTimeline: React.FC = () => {
 
         {/* Timeline */}
         <div className="relative">
-          {/* Center line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px md:-translate-x-px overflow-hidden">
+          {/* Center line - stops at last card */}
+          <div className="absolute left-4 md:left-1/2 top-0 w-px md:-translate-x-px overflow-hidden" style={{ height: 'calc(100% - 200px)' }}>
             <div
               className="w-full h-full"
               style={{
-                background: 'linear-gradient(to bottom, hsl(var(--noorly-coral)), hsl(var(--noorly-blue)), hsl(var(--noorly-purple)), hsl(var(--noorly-gold)))',
+                background: 'linear-gradient(to bottom, hsl(var(--noorly-coral)), hsl(var(--noorly-blue)), hsl(var(--noorly-purple)), hsl(var(--noorly-gold)), transparent)',
               }}
             />
           </div>
