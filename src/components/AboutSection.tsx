@@ -40,7 +40,7 @@ const AboutSection: React.FC = () => {
                 <p className="text-noorly-gold text-base italic leading-relaxed">
                   "Say, 'O My servants who have transgressed against themselves, do not despair of the mercy of Allah. Indeed, Allah forgives all sins. Indeed, it is He who is the Forgiving, the Merciful.'"
                 </p>
-                <p className="text-noorly-text-3 text-sm">— Surah Az-Zumar 39:53 (Saheeh International)</p>
+                <p className="text-noorly-text-3 text-sm">Surah Az-Zumar 39:53 (Saheeh International)</p>
               </>
             ) : (
               <>
