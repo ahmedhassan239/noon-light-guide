@@ -99,7 +99,7 @@ const JourneyTimeline: React.FC = () => {
             />
           </div>
 
-          <div className="space-y-20">
+          <div className="space-y-14">
             {timelineItems.map((item, i) => {
               const isLeft = i % 2 === 0;
               return (
