@@ -52,7 +52,7 @@ const timelineItems = [
     days: 'Days 43–60',
     weeksAr: 'الأسبوع ٧–٩',
     daysAr: 'الأيام ٤٣–٦٠',
-    emoji: '☪️',
+    emoji: '📿',
     colorVar: 'noorly-gold',
     titleEn: 'Living Islam',
     titleAr: 'العيش في الإسلام',
