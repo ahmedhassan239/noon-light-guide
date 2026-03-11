@@ -47,7 +47,7 @@ const AboutSection: React.FC = () => {
                 <p className="font-amiri text-noorly-gold text-lg leading-[2.2]" dir="rtl">
                   قُلْ يَا عِبَادِيَ الَّذِينَ أَسْرَفُوا عَلَىٰ أَنفُسِهِمْ لَا تَقْنَطُوا مِن رَّحْمَةِ اللَّهِ ۚ إِنَّ اللَّهَ يَغْفِرُ الذُّنُوبَ جَمِيعًا ۚ إِنَّهُ هُوَ الْغَفُورُ الرَّحِيمُ
                 </p>
-                <p className="text-noorly-text-3 text-sm font-amiri" dir="rtl">— سورة الزمر 39:53</p>
+                <p className="text-noorly-text-3 text-sm font-amiri" dir="rtl">سورة الزمر 39:53</p>
               </>
             )}
           </blockquote>
