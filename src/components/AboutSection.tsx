@@ -21,8 +21,8 @@ const AboutSection: React.FC = () => {
 
           <p className="text-noorly-text-2 leading-relaxed">
             {t(
-              'When you first accept Islam, you\'re handed a universe of knowledge — prayers, fasting, Quran, theology, community, and more. It\'s beautiful, but overwhelming. NooRly was built to guide you through that first chapter gently, day by day.',
-              'عندما تقبل الإسلام لأول مرة، تُمنح عالمًا من المعرفة — الصلاة والصيام والقرآن والعقيدة والمجتمع والمزيد. إنه جميل، لكنه مُرهق. بُني نورلي ليرشدك خلال هذا الفصل الأول بلطف، يومًا بيوم.'
+              'When you first accept Islam, you\'re handed a universe of knowledge: prayers, fasting, Quran, theology, community, and more. It\'s beautiful, but overwhelming. NooRly was built to guide you through that first chapter gently, day by day.',
+              'عندما تقبل الإسلام لأول مرة، تُمنح عالمًا من المعرفة: الصلاة والصيام والقرآن والعقيدة والمجتمع والمزيد. إنه جميل، لكنه مُرهق. بُني نورلي ليرشدك خلال هذا الفصل الأول بلطف، يومًا بيوم.'
             )}
           </p>
 
