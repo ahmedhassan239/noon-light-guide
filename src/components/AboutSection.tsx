@@ -21,15 +21,15 @@ const AboutSection: React.FC = () => {
 
           <p className="text-noorly-text-2 leading-relaxed">
             {t(
-              'When you first accept Islam, you\'re handed a universe of knowledge — prayers, fasting, Quran, theology, community, and more. It\'s beautiful, but overwhelming. NooRly was built to guide you through that first chapter gently, day by day.',
-              'عندما تقبل الإسلام لأول مرة، تُمنح عالمًا من المعرفة — الصلاة والصيام والقرآن والعقيدة والمجتمع والمزيد. إنه جميل، لكنه مُرهق. بُني نورلي ليرشدك خلال هذا الفصل الأول بلطف، يومًا بيوم.'
+              'When you first accept Islam, you\'re handed a universe of knowledge: prayers, fasting, Quran, theology, community, and more. It\'s beautiful, but overwhelming. NooRly was built to guide you through that first chapter gently, day by day.',
+              'عندما تقبل الإسلام لأول مرة، تُمنح عالمًا من المعرفة: الصلاة والصيام والقرآن والعقيدة والمجتمع والمزيد. إنه جميل، لكنه مُرهق. بُني نورلي ليرشدك خلال هذا الفصل الأول بلطف، يومًا بيوم.'
             )}
           </p>
 
           <p className="text-noorly-text-2 leading-relaxed">
             {t(
-              'No jargon. No judgment. Just a clear, structured path from Day 1 to Day 60 — with lessons, duas, Quran verses, and real human support for the moments when things feel hard.',
-              'بدون مصطلحات معقدة. بدون أحكام. مجرد مسار واضح ومنظم من اليوم الأول إلى اليوم الستين — مع دروس وأدعية وآيات قرآنية ودعم حقيقي للحظات الصعبة.'
+              'No jargon. No judgment. Just a clear, structured path from Day 1 to Day 60, with lessons, duas, Quran verses, and real human support for the moments when things feel hard.',
+              'بدون مصطلحات معقدة. بدون أحكام. مجرد مسار واضح ومنظم من اليوم الأول إلى اليوم الستين، مع دروس وأدعية وآيات قرآنية ودعم حقيقي للحظات الصعبة.'
             )}
           </p>
 
@@ -40,22 +40,22 @@ const AboutSection: React.FC = () => {
                 <p className="text-noorly-gold text-base italic leading-relaxed">
                   "Say, 'O My servants who have transgressed against themselves, do not despair of the mercy of Allah. Indeed, Allah forgives all sins. Indeed, it is He who is the Forgiving, the Merciful.'"
                 </p>
-                <p className="text-noorly-text-3 text-sm">— Surah Az-Zumar 39:53 (Saheeh International)</p>
+                <p className="text-noorly-text-3 text-sm">Surah Az-Zumar 39:53 (Saheeh International)</p>
               </>
             ) : (
               <>
                 <p className="font-amiri text-noorly-gold text-lg leading-[2.2]" dir="rtl">
                   قُلْ يَا عِبَادِيَ الَّذِينَ أَسْرَفُوا عَلَىٰ أَنفُسِهِمْ لَا تَقْنَطُوا مِن رَّحْمَةِ اللَّهِ ۚ إِنَّ اللَّهَ يَغْفِرُ الذُّنُوبَ جَمِيعًا ۚ إِنَّهُ هُوَ الْغَفُورُ الرَّحِيمُ
                 </p>
-                <p className="text-noorly-text-3 text-sm font-amiri" dir="rtl">— سورة الزمر 39:53</p>
+                <p className="text-noorly-text-3 text-sm font-amiri" dir="rtl">سورة الزمر 39:53</p>
               </>
             )}
           </blockquote>
 
           <p className="text-noorly-text-2 text-sm italic">
             {t(
-              'Think of it as your gentle guide into Islam — structured, supportive, and always by your side.',
-              'فكّر فيه كدليلك اللطيف إلى الإسلام — منظم وداعم ودائمًا بجانبك.'
+              'Think of it as your gentle guide into Islam. Structured, supportive, and always by your side.',
+              'فكّر فيه كدليلك اللطيف إلى الإسلام. منظم وداعم ودائمًا بجانبك.'
             )}
           </p>
         </div>
