@@ -13,6 +13,9 @@ const timelineItems = [
     titleAr: 'الأساسيات',
     descEn: 'Who is Allah? Understanding Iman, the Shahada, and Allah\'s infinite mercy.',
     descAr: 'من هو الله؟ فهم الإيمان والشهادة ورحمة الله اللانهائية.',
+    topics: ['Shahada', 'Iman', 'Mercy', 'Tawhid'],
+    topicsAr: ['الشهادة', 'الإيمان', 'الرحمة', 'التوحيد'],
+    progress: 25,
   },
   {
     weeks: 'Week 3–4',
@@ -25,6 +28,9 @@ const timelineItems = [
     titleAr: 'الصلاة والاستقرار',
     descEn: 'Wudu, Salah, connecting with the Quran, and daily Dhikr.',
     descAr: 'الوضوء والصلاة والتواصل مع القرآن والذكر اليومي.',
+    topics: ['Wudu', 'Salah', 'Quran', 'Dhikr'],
+    topicsAr: ['الوضوء', 'الصلاة', 'القرآن', 'الذكر'],
+    progress: 50,
   },
   {
     weeks: 'Week 5–6',
@@ -37,6 +43,9 @@ const timelineItems = [
     titleAr: 'القرآن والحياة الروحية',
     descEn: 'Fasting, Zakat, Hajj, Tawakkul, and deepening your relationship with Allah.',
     descAr: 'الصيام والزكاة والحج والتوكل وتعميق علاقتك بالله.',
+    topics: ['Fasting', 'Zakat', 'Hajj', 'Tawakkul'],
+    topicsAr: ['الصيام', 'الزكاة', 'الحج', 'التوكل'],
+    progress: 75,
   },
   {
     weeks: 'Week 7–9',
@@ -49,6 +58,9 @@ const timelineItems = [
     titleAr: 'العيش في الإسلام',
     descEn: 'Honesty, mercy, humility, balance — carrying Islam into every part of your life.',
     descAr: 'الصدق والرحمة والتواضع والتوازن — حمل الإسلام في كل جزء من حياتك.',
+    topics: ['Honesty', 'Mercy', 'Humility', 'Balance'],
+    topicsAr: ['الصدق', 'الرحمة', 'التواضع', 'التوازن'],
+    progress: 100,
   },
 ];
 
@@ -67,14 +79,27 @@ const JourneyTimeline: React.FC = () => {
             {t('Your journey, ', 'رحلتك، ')}
             <span className="text-noorly-coral">{t('beautifully mapped.', 'مرسومة بجمال.')}</span>
           </h2>
+          <p className="text-noorly-text-2 max-w-lg mx-auto">
+            {t(
+              'A structured 60-day path from your first steps to living Islam with confidence.',
+              'مسار منظم من ٦٠ يومًا من خطواتك الأولى إلى العيش بالإسلام بثقة.'
+            )}
+          </p>
         </div>
 
         {/* Timeline */}
         <div className="relative">
           {/* Center line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-noorly-coral via-noorly-blue via-noorly-purple to-noorly-gold md:-translate-x-px" />
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px md:-translate-x-px overflow-hidden">
+            <div
+              className="w-full h-full"
+              style={{
+                background: 'linear-gradient(to bottom, hsl(var(--noorly-coral)), hsl(var(--noorly-blue)), hsl(var(--noorly-purple)), hsl(var(--noorly-gold)))',
+              }}
+            />
+          </div>
 
-          <div className="space-y-16">
+          <div className="space-y-20">
             {timelineItems.map((item, i) => {
               const isLeft = i % 2 === 0;
               return (
@@ -85,11 +110,24 @@ const JourneyTimeline: React.FC = () => {
                   }`}
                   data-delay={String(i * 150)}
                 >
-                  {/* Dot */}
-                  <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-noorly-surface border-2 border-border flex items-center justify-center z-10"
-                    style={{ boxShadow: `0 0 20px hsl(var(--${item.colorVar}) / 0.4)` }}
-                  >
-                    <span className="text-lg">{item.emoji}</span>
+                  {/* Dot with glow ring */}
+                  <div className="absolute left-4 md:left-1/2 -translate-x-1/2 z-10">
+                    <div
+                      className="absolute inset-0 rounded-full animate-breathe"
+                      style={{
+                        background: `radial-gradient(circle, hsl(var(--${item.colorVar}) / 0.3), transparent 70%)`,
+                        transform: 'scale(3)',
+                      }}
+                    />
+                    <div
+                      className="relative w-12 h-12 rounded-full bg-noorly-surface border-2 flex items-center justify-center"
+                      style={{
+                        borderColor: `hsl(var(--${item.colorVar}))`,
+                        boxShadow: `0 0 24px hsl(var(--${item.colorVar}) / 0.5)`,
+                      }}
+                    >
+                      <span className="text-xl">{item.emoji}</span>
+                    </div>
                   </div>
 
                   {/* Content */}
@@ -98,16 +136,66 @@ const JourneyTimeline: React.FC = () => {
                       isLeft ? 'md:pr-12 md:text-right rtl:md:text-left rtl:md:pl-12 rtl:md:pr-0' : 'md:pl-12 md:text-left rtl:md:text-right rtl:md:pr-12 rtl:md:pl-0'
                     }`}
                   >
-                    <div className="bg-noorly-surface rounded-lg p-6 border border-border hover:border-foreground/10 transition-colors duration-300">
-                      <p className="text-xs text-noorly-text-3 font-medium">
-                        {t(item.weeks, item.weeksAr)} · {t(item.days, item.daysAr)}
-                      </p>
-                      <h3 className="font-body font-bold text-foreground text-xl mt-2">
+                    <div
+                      className="group bg-noorly-surface rounded-2xl p-6 border border-border hover:border-foreground/15 transition-all duration-500 hover:-translate-y-1"
+                      style={{
+                        boxShadow: `0 0 0 0 hsl(var(--${item.colorVar}) / 0)`,
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.boxShadow = `0 8px 32px hsl(var(--${item.colorVar}) / 0.15)`;
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.boxShadow = `0 0 0 0 hsl(var(--${item.colorVar}) / 0)`;
+                      }}
+                    >
+                      {/* Week badge */}
+                      <div className="flex items-center gap-2 mb-3">
+                        <span
+                          className="inline-flex items-center px-3 py-1 rounded-pill text-xs font-medium text-foreground"
+                          style={{ background: `hsl(var(--${item.colorVar}) / 0.15)` }}
+                        >
+                          {t(item.weeks, item.weeksAr)}
+                        </span>
+                        <span className="text-xs text-noorly-text-3">
+                          {t(item.days, item.daysAr)}
+                        </span>
+                      </div>
+
+                      <h3 className="font-body font-bold text-foreground text-xl">
                         {t(item.titleEn, item.titleAr)}
                       </h3>
-                      <p className="text-noorly-text-2 text-sm mt-3 leading-relaxed">
+
+                      <p className="text-noorly-text-2 text-sm mt-2 leading-relaxed">
                         {t(item.descEn, item.descAr)}
                       </p>
+
+                      {/* Topic pills */}
+                      <div className="flex flex-wrap gap-2 mt-4">
+                        {(t(item.topics.join(','), item.topicsAr.join(','))).split(',').map((topic) => (
+                          <span
+                            key={topic}
+                            className="px-2.5 py-0.5 rounded-pill text-[11px] text-noorly-text-2 border border-border"
+                          >
+                            {topic}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Mini progress */}
+                      <div className="mt-4 flex items-center gap-3">
+                        <div className="flex-1 h-1 bg-foreground/10 rounded-full overflow-hidden">
+                          <div
+                            className="h-full rounded-full transition-all duration-700"
+                            style={{
+                              width: `${item.progress}%`,
+                              background: `linear-gradient(90deg, hsl(var(--${item.colorVar})), hsl(var(--${item.colorVar}) / 0.5))`,
+                            }}
+                          />
+                        </div>
+                        <span className="text-[10px] text-noorly-text-3 font-medium">
+                          {item.progress}%
+                        </span>
+                      </div>
                     </div>
                   </div>
 
@@ -117,6 +205,27 @@ const JourneyTimeline: React.FC = () => {
               );
             })}
           </div>
+
+          {/* End marker */}
+          <div className="flex justify-center mt-12">
+            <div className="relative">
+              <div
+                className="absolute inset-0 rounded-full animate-breathe"
+                style={{
+                  background: 'radial-gradient(circle, hsl(var(--noorly-gold) / 0.3), transparent 70%)',
+                  transform: 'scale(3)',
+                }}
+              />
+              <div className="relative w-14 h-14 rounded-full bg-noorly-surface border-2 border-noorly-gold flex items-center justify-center"
+                style={{ boxShadow: '0 0 24px hsl(var(--noorly-gold) / 0.5)' }}
+              >
+                <span className="text-xl">🌙</span>
+              </div>
+            </div>
+          </div>
+          <p className="text-center text-noorly-text-3 text-sm mt-4 scroll-reveal">
+            {t('Your new life begins ✨', 'حياتك الجديدة تبدأ ✨')}
+          </p>
         </div>
       </div>
     </section>
