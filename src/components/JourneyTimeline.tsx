@@ -207,25 +207,49 @@ const JourneyTimeline: React.FC = () => {
           </div>
 
           {/* End marker */}
-          <div className="flex justify-center mt-12">
-            <div className="relative">
+          <div className="flex flex-col items-center mt-16 scroll-reveal">
+            <div className="relative group">
+              {/* Outer glow rings */}
               <div
                 className="absolute inset-0 rounded-full animate-breathe"
                 style={{
-                  background: 'radial-gradient(circle, hsl(var(--noorly-gold) / 0.3), transparent 70%)',
-                  transform: 'scale(3)',
+                  background: 'radial-gradient(circle, hsl(var(--noorly-gold) / 0.15), transparent 70%)',
+                  transform: 'scale(5)',
                 }}
               />
-              <div className="relative w-14 h-14 rounded-full bg-noorly-surface border-2 border-noorly-gold flex items-center justify-center"
-                style={{ boxShadow: '0 0 24px hsl(var(--noorly-gold) / 0.5)' }}
+              <div
+                className="absolute inset-0 rounded-full"
+                style={{
+                  background: 'radial-gradient(circle, hsl(var(--noorly-coral) / 0.1), transparent 70%)',
+                  transform: 'scale(3.5)',
+                  animation: 'breathe 3s ease-in-out infinite 1s',
+                }}
+              />
+
+              {/* Main circle */}
+              <div
+                className="relative w-20 h-20 rounded-full bg-noorly-surface border-2 border-noorly-gold flex items-center justify-center transition-transform duration-500 group-hover:scale-110"
+                style={{
+                  boxShadow: '0 0 32px hsl(var(--noorly-gold) / 0.5), inset 0 0 20px hsl(var(--noorly-gold) / 0.1)',
+                }}
               >
-                <span className="text-xl">🌙</span>
+                <span className="text-3xl">☪️</span>
               </div>
             </div>
+
+            {/* Text */}
+            <div className="mt-6 text-center space-y-2">
+              <p className="font-body font-bold text-foreground text-lg">
+                {t('Your new life begins', 'حياتك الجديدة تبدأ')}
+              </p>
+              <p className="text-noorly-text-3 text-sm max-w-xs">
+                {t(
+                  'Day 60 is not the end — it\'s the beginning of a lifetime of faith.',
+                  'اليوم الستون ليس النهاية — إنه بداية حياة كاملة من الإيمان.'
+                )}
+              </p>
+            </div>
           </div>
-          <p className="text-center text-noorly-text-3 text-sm mt-4 scroll-reveal">
-            {t('Your new life begins ✨', 'حياتك الجديدة تبدأ ✨')}
-          </p>
         </div>
       </div>
     </section>
