@@ -38,8 +38,8 @@ const features = [
     colorVar: '--noorly-green',
     en: 'Help Right Now',
     ar: 'المساعدة الفورية',
-    descEn: 'Real guidance for real struggles — doubt, family pressure, spiritual emptiness.',
-    descAr: 'إرشاد حقيقي لصراعات حقيقية — الشك والضغط العائلي والفراغ الروحي.',
+    descEn: 'Real guidance for real struggles. Doubt, family pressure, spiritual emptiness.',
+    descAr: 'إرشاد حقيقي لصراعات حقيقية. الشك والضغط العائلي والفراغ الروحي.',
   },
   {
     icon: (

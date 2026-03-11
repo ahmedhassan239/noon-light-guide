@@ -54,8 +54,8 @@ const AboutSection: React.FC = () => {
 
           <p className="text-noorly-text-2 text-sm italic">
             {t(
-              'Think of it as your gentle guide into Islam — structured, supportive, and always by your side.',
-              'فكّر فيه كدليلك اللطيف إلى الإسلام — منظم وداعم ودائمًا بجانبك.'
+              'Think of it as your gentle guide into Islam. Structured, supportive, and always by your side.',
+              'فكّر فيه كدليلك اللطيف إلى الإسلام. منظم وداعم ودائمًا بجانبك.'
             )}
           </p>
         </div>

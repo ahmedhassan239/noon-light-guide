@@ -44,7 +44,7 @@ const HelpSection: React.FC = () => {
             {t('✦ Real Support ✦', '✦ دعم حقيقي ✦')}
           </span>
           <h2 className="font-body font-extrabold text-foreground text-3xl md:text-4xl leading-tight">
-            {t('"If You Need Help Now" — ', '"إذا احتجت مساعدة الآن" — ')}
+            {t('"If You Need Help Now" ', '"إذا احتجت مساعدة الآن" ')}
             <span className="text-noorly-green">{t('We\'re here.', 'نحن هنا.')}</span>
           </h2>
           <p className="text-noorly-text-2 max-w-xl mx-auto">
