@@ -181,21 +181,6 @@ const JourneyTimeline: React.FC = () => {
                         ))}
                       </div>
 
-                      {/* Mini progress */}
-                      <div className="mt-4 flex items-center gap-3">
-                        <div className="flex-1 h-1 bg-foreground/10 rounded-full overflow-hidden">
-                          <div
-                            className="h-full rounded-full transition-all duration-700"
-                            style={{
-                              width: `${item.progress}%`,
-                              background: `linear-gradient(90deg, hsl(var(--${item.colorVar})), hsl(var(--${item.colorVar}) / 0.5))`,
-                            }}
-                          />
-                        </div>
-                        <span className="text-[10px] text-noorly-text-3 font-medium">
-                          {item.progress}%
-                        </span>
-                      </div>
                     </div>
                   </div>
 
