@@ -206,17 +206,39 @@ const JourneyTimeline: React.FC = () => {
             })}
           </div>
 
-          {/* End text */}
-          <div className="text-center mt-14 scroll-reveal space-y-2">
-            <p className="font-body font-extrabold text-foreground text-xl tracking-tight">
-              {t('Your new life begins', 'حياتك الجديدة تبدأ')}
-            </p>
-            <p className="text-noorly-text-2 text-sm max-w-sm mx-auto leading-relaxed">
-              {t(
-                'Day 60 is not the end. It\'s the beginning of a lifetime of faith.',
-                'اليوم الستون ليس النهاية. إنه بداية حياة كاملة من الإيمان.'
-              )}
-            </p>
+          {/* Final stage marker */}
+          <div className="relative flex flex-col items-center mt-14 scroll-reveal">
+            {/* Dot on the line */}
+            <div className="relative z-10 mb-6">
+              <div
+                className="absolute inset-0 rounded-full animate-breathe"
+                style={{
+                  background: 'radial-gradient(circle, hsl(var(--noorly-gold) / 0.2), transparent 70%)',
+                  transform: 'scale(4)',
+                }}
+              />
+              <div
+                className="relative w-14 h-14 rounded-full bg-noorly-surface border-2 border-noorly-gold flex items-center justify-center"
+                style={{
+                  boxShadow: '0 0 24px hsl(var(--noorly-gold) / 0.4)',
+                }}
+              >
+                <span className="text-2xl">☪️</span>
+              </div>
+            </div>
+
+            {/* Text */}
+            <div className="text-center space-y-2">
+              <p className="font-body font-extrabold text-foreground text-xl tracking-tight">
+                {t('Your new life begins', 'حياتك الجديدة تبدأ')}
+              </p>
+              <p className="text-noorly-text-2 text-sm max-w-sm mx-auto leading-relaxed">
+                {t(
+                  'Day 60 is not the end. It\'s the beginning of a lifetime of faith.',
+                  'اليوم الستون ليس النهاية. إنه بداية حياة كاملة من الإيمان.'
+                )}
+              </p>
+            </div>
           </div>
         </div>
       </div>
