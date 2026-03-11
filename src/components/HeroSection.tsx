@@ -23,17 +23,6 @@ const HeroSection: React.FC = () => {
           </span>
         </div>
 
-        {/* Arabic subtitle - only in EN mode as decorative brand element */}
-        {lang === 'en' && (
-          <p
-            className="font-amiri text-noorly-gold text-xl md:text-2xl"
-            style={{ animation: 'fadeUp 0.8s 0.1s ease both' }}
-            dir="rtl"
-          >
-            رفيق المسلمين الجدد
-          </p>
-        )}
-
         {/* Main headline */}
         <h1
           className="font-body font-extrabold text-foreground text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight max-w-3xl"

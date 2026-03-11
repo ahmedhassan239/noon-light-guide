@@ -2,7 +2,7 @@ import React from 'react';
 import { useLang } from '@/contexts/LangContext';
 
 const DownloadSection: React.FC = () => {
-  const { t } = useLang();
+  const { t, lang } = useLang();
 
   return (
     <section id="download" className="relative z-10 py-[120px] px-6 md:px-12 geometric-pattern">
@@ -13,15 +13,21 @@ const DownloadSection: React.FC = () => {
       />
 
       <div className="max-w-noorly mx-auto text-center space-y-10 relative z-10">
-        {/* Bismillah - always Arabic */}
-        <p className="font-amiri text-noorly-gold text-3xl" dir="rtl">
-          بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
-        </p>
+        {/* Bismillah */}
+        {lang === 'ar' ? (
+          <p className="font-amiri text-noorly-gold text-3xl" dir="rtl">
+            بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+          </p>
+        ) : (
+          <p className="font-amiri text-noorly-gold text-2xl">
+            In the Name of Allah, the Most Gracious, the Most Merciful
+          </p>
+        )}
 
         {/* Heading */}
         <h2 className="font-body font-extrabold text-foreground text-3xl md:text-5xl leading-tight scroll-reveal">
           {t('Begin your journey with ', 'ابدأ رحلتك مع ')}
-          <span className="text-noorly-coral">NooRly</span>
+          <span className="text-noorly-coral">{t('NooRly', 'نورلي')}</span>
           {t(' today.', ' اليوم.')}
         </h2>
 

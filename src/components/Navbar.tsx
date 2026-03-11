@@ -28,8 +28,9 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
           <span className="text-lg">🌙</span>
-          <span className="font-body font-bold text-foreground">NooRly</span>
-          <span className="font-amiri text-noorly-gold text-sm">نورلي</span>
+          <span className="font-body font-bold text-foreground animate-noorly-reveal">
+            {t('NooRly', 'نورلي')}
+          </span>
         </a>
 
         {/* Links - hidden on mobile */}
