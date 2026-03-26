@@ -21,15 +21,17 @@ const Navbar: React.FC = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-background/95' : 'bg-background/80'
-      } backdrop-blur-xl border-b border-border`}
+        scrolled ? 'bg-noorly-navy-deep/95' : 'bg-noorly-navy-deep/80'
+      } backdrop-blur-xl`}
+      style={{ borderBottom: '1px solid rgba(201,168,76,0.15)' }}
     >
       <div className="max-w-noorly mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
           <span className="text-lg">🌙</span>
           <span className="font-body font-bold text-foreground animate-noorly-reveal">
-            {t('NooRly', 'نورلي')}
+            {t('NooR', 'نور')}
+            <span className="text-noorly-orange">{t('ly', 'لي')}</span>
           </span>
         </a>
 
@@ -54,7 +56,7 @@ const Navbar: React.FC = () => {
               onClick={() => setLang('en')}
               className={`px-3 py-1 text-xs font-semibold rounded-pill transition-all duration-250 font-arabic-ui ${
                 lang === 'en'
-                  ? 'bg-noorly-coral text-foreground shadow-[0_2px_12px_rgba(251,146,60,0.3)]'
+                  ? 'bg-noorly-orange text-noorly-navy-deep shadow-[0_2px_12px_rgba(245,166,35,0.3)]'
                   : 'text-noorly-text-3 hover:text-noorly-text-2'
               }`}
             >
@@ -64,7 +66,7 @@ const Navbar: React.FC = () => {
               onClick={() => setLang('ar')}
               className={`px-3 py-1 text-xs font-semibold rounded-pill transition-all duration-250 font-arabic-ui ${
                 lang === 'ar'
-                  ? 'bg-noorly-coral text-foreground shadow-[0_2px_12px_rgba(251,146,60,0.3)]'
+                  ? 'bg-noorly-orange text-noorly-navy-deep shadow-[0_2px_12px_rgba(245,166,35,0.3)]'
                   : 'text-noorly-text-3 hover:text-noorly-text-2'
               }`}
             >
@@ -75,7 +77,7 @@ const Navbar: React.FC = () => {
           {/* CTA */}
           <a
             href="#download"
-            className="hidden sm:inline-flex items-center px-5 py-2 text-sm font-medium bg-noorly-coral text-foreground rounded-pill transition-transform duration-200 hover:scale-[1.04]"
+            className="hidden sm:inline-flex items-center px-5 py-2 text-sm font-medium bg-noorly-orange text-noorly-navy-deep rounded-pill transition-transform duration-200 hover:scale-[1.04]"
           >
             {t('Download Free', 'تحميل مجاني')}
           </a>

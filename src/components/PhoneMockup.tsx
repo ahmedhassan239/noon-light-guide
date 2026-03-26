@@ -10,7 +10,7 @@ const PhoneMockup: React.FC = () => {
       <div
         className="absolute inset-0 animate-glow-pulse rounded-full"
         style={{
-          background: 'radial-gradient(circle, rgba(59,130,246,0.2) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(27,79,168,0.25) 0%, transparent 70%)',
           transform: 'scale(1.5)',
         }}
       />
@@ -40,7 +40,7 @@ const PhoneMockup: React.FC = () => {
           <div
             className="rounded-2xl p-4 space-y-2"
             style={{
-              background: 'linear-gradient(135deg, hsl(var(--noorly-blue)), hsl(217 91% 45%))',
+              background: 'linear-gradient(135deg, hsl(var(--noorly-navy-mid)), hsl(var(--noorly-blue)))',
             }}
           >
             <p className="text-xs text-foreground/80">
@@ -57,7 +57,7 @@ const PhoneMockup: React.FC = () => {
               <div
                 className="h-full rounded-full"
                 style={{
-                  background: 'linear-gradient(90deg, hsl(var(--noorly-gold)), hsl(var(--noorly-coral)))',
+                  background: 'linear-gradient(90deg, hsl(var(--noorly-gold)), hsl(var(--noorly-orange)))',
                   width: '35%',
                   animation: 'progressFill 1.4s ease-out forwards',
                 }}
@@ -66,8 +66,8 @@ const PhoneMockup: React.FC = () => {
           </div>
 
           {/* Verse card */}
-          <div className="rounded-2xl p-4 bg-noorly-surface-2 border-l-2 border-noorly-purple space-y-2">
-            <p className="text-xs text-noorly-purple font-medium">
+          <div className="rounded-2xl p-4 bg-noorly-surface-2 border-l-2 border-noorly-blue space-y-2">
+            <p className="text-xs text-noorly-blue font-medium">
               {t('✦ Today\'s Inspiration', '✦ إلهام اليوم')}
             </p>
             {lang === 'en' ? (
