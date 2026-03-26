@@ -16,12 +16,14 @@ const Starfield: React.FC = () => {
     resize();
     window.addEventListener('resize', resize);
 
+    // Mix of blue and gold stars
     const stars = Array.from({ length: 70 }, () => ({
       x: Math.random(),
       y: Math.random(),
       r: Math.random() * 1.2 + 0.4,
       speed: Math.random() * 0.0008 + 0.0003,
       phase: Math.random() * Math.PI * 2,
+      isGold: Math.random() > 0.7, // 30% gold, 70% blue
     }));
 
     let animId: number;
@@ -31,7 +33,11 @@ const Starfield: React.FC = () => {
         const opacity = 0.15 + 0.35 * (0.5 + 0.5 * Math.sin(time * s.speed * 2 + s.phase));
         ctx.beginPath();
         ctx.arc(s.x * canvas.width, s.y * canvas.height, s.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255,255,255,${opacity})`;
+        if (s.isGold) {
+          ctx.fillStyle = `rgba(201,168,76,${opacity})`;
+        } else {
+          ctx.fillStyle = `rgba(59,130,246,${opacity})`;
+        }
         ctx.fill();
       });
       animId = requestAnimationFrame(draw);

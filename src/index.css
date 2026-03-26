@@ -4,57 +4,66 @@
 
 @layer base {
   :root {
-    /* NooRly Dark Theme */
-    --background: 0 0% 7.1%;
-    --foreground: 0 0% 100%;
+    /* NooRly Islamic Blue Theme */
+    --background: 214 62% 10%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 11.8%;
-    --card-foreground: 0 0% 100%;
+    --card: 214 58% 16%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 11.8%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 214 58% 16%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 24 96% 61%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 38 91% 55%;
+    --primary-foreground: 216 65% 17%;
 
-    --secondary: 0 0% 16.5%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 214 58% 16%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 0 0% 16.5%;
-    --muted-foreground: 220 9% 46%;
+    --muted: 214 58% 16%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 0 0% 16.5%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 214 58% 16%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 210 40% 98%;
 
     --border: 0 0% 100% / 0.08;
     --input: 0 0% 100% / 0.08;
-    --ring: 24 96% 61%;
+    --ring: 38 91% 55%;
 
     --radius: 1.125rem;
 
-    /* NooRly Brand Colors */
-    --noorly-bg: 0 0% 7.1%;
-    --noorly-surface: 0 0% 11.8%;
-    --noorly-surface-2: 0 0% 16.5%;
+    /* NooRly Brand Colors - Islamic Blue */
+    --noorly-bg: 214 62% 10%;
+    --noorly-surface: 214 58% 16%;
+    --noorly-surface-2: 215 61% 27%;
     --noorly-blue: 217 91% 60%;
-    --noorly-purple: 263 86% 77%;
-    --noorly-coral: 24 96% 61%;
+    --noorly-navy-mid: 217 72% 38%;
+    --noorly-navy-deep: 216 65% 17%;
+    --noorly-orange: 38 91% 55%;
     --noorly-green: 160 84% 39%;
-    --noorly-gold: 38 92% 50%;
-    --noorly-text-2: 0 0% 70%;
-    --noorly-text-3: 220 9% 46%;
+    --noorly-gold: 43 52% 54%;
+    --noorly-text-2: 215 25% 84%;
+    --noorly-text-3: 215 16% 47%;
 
-    --sidebar-background: 0 0% 7.1%;
-    --sidebar-foreground: 0 0% 70%;
-    --sidebar-primary: 24 96% 61%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 16.5%;
-    --sidebar-accent-foreground: 0 0% 100%;
+    /* Light section */
+    --noorly-light-bg: 216 47% 96%;
+    --noorly-light-text: 215 25% 17%;
+    --noorly-light-muted: 215 16% 47%;
+
+    /* Footer */
+    --noorly-footer: 216 71% 10%;
+
+    --sidebar-background: 214 62% 10%;
+    --sidebar-foreground: 215 25% 84%;
+    --sidebar-primary: 38 91% 55%;
+    --sidebar-primary-foreground: 216 65% 17%;
+    --sidebar-accent: 214 58% 16%;
+    --sidebar-accent-foreground: 210 40% 98%;
     --sidebar-border: 0 0% 100% / 0.08;
-    --sidebar-ring: 24 96% 61%;
+    --sidebar-ring: 38 91% 55%;
   }
 }
 
@@ -163,17 +172,45 @@
   opacity: 0.5;
 }
 
-/* Geometric pattern overlay */
-.geometric-pattern {
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='0.5' opacity='0.05'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z'/%3E%3Cpath d='M30 10L50 30L30 50L10 30Z'/%3E%3Cpath d='M30 20L40 30L30 40L20 30Z'/%3E%3C/g%3E%3C/svg%3E");
+/* Geometric pattern overlays */
+.pattern-stars8 {
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='0.5' opacity='0.06'%3E%3Cpath d='M40 0L54.14 25.86L80 40L54.14 54.14L40 80L25.86 54.14L0 40L25.86 25.86Z'/%3E%3Ccircle cx='40' cy='40' r='15'/%3E%3Ccircle cx='40' cy='40' r='25'/%3E%3Cpath d='M40 15L45 35L65 40L45 45L40 65L35 45L15 40L35 35Z'/%3E%3C/g%3E%3C/svg%3E");
   background-repeat: repeat;
+}
+
+.pattern-girih {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='0.5' opacity='0.05'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z'/%3E%3Cpath d='M30 10L50 30L30 50L10 30Z'/%3E%3Cpath d='M30 20L40 30L30 40L20 30Z'/%3E%3Cpath d='M0 0L30 0L30 30L0 30Z'/%3E%3Cpath d='M30 0L60 0L60 30L30 30Z'/%3E%3Cpath d='M0 30L30 30L30 60L0 60Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+.pattern-arabesque {
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23C9A84C' stroke-width='0.5' opacity='0.08'%3E%3Ccircle cx='50' cy='50' r='40'/%3E%3Ccircle cx='50' cy='50' r='25'/%3E%3Ccircle cx='50' cy='50' r='10'/%3E%3Cpath d='M50 10A40 40 0 0150 90'/%3E%3Cpath d='M10 50A40 40 0 0190 50'/%3E%3Cpath d='M25 25L75 75M75 25L25 75'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* Light section styles */
+.section-light {
+  background: hsl(var(--noorly-light-bg));
+  color: hsl(var(--noorly-light-text));
+}
+
+.section-light .text-noorly-text-2 {
+  color: hsl(var(--noorly-light-muted));
+}
+
+.section-light .text-noorly-text-3 {
+  color: hsl(215 16% 57%);
+}
+
+.section-light .text-foreground {
+  color: hsl(var(--noorly-light-text));
 }
 
 /* Custom cursor styles */
 .custom-cursor-dot {
   width: 12px;
   height: 12px;
-  background: hsl(var(--noorly-coral));
+  background: hsl(var(--noorly-orange));
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
@@ -184,7 +221,7 @@
 .custom-cursor-ring {
   width: 36px;
   height: 36px;
-  border: 1.5px solid hsl(var(--noorly-coral) / 0.5);
+  border: 1.5px solid hsl(var(--noorly-orange) / 0.5);
   border-radius: 50%;
   position: fixed;
   pointer-events: none;

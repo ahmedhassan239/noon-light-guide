@@ -5,11 +5,11 @@ const DownloadSection: React.FC = () => {
   const { t, lang } = useLang();
 
   return (
-    <section id="download" className="relative z-10 py-[120px] px-6 md:px-12 geometric-pattern">
+    <section id="download" className="relative z-10 py-[120px] px-6 md:px-12 pattern-arabesque" style={{ background: 'hsl(var(--noorly-navy-deep))' }}>
       {/* Radial glow */}
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{ background: 'radial-gradient(circle at center, rgba(251,146,60,0.08) 0%, transparent 70%)' }}
+        style={{ background: 'radial-gradient(circle at center, rgba(27,79,168,0.12) 0%, transparent 70%)' }}
       />
 
       <div className="max-w-noorly mx-auto text-center space-y-10 relative z-10">
@@ -27,7 +27,7 @@ const DownloadSection: React.FC = () => {
         {/* Heading */}
         <h2 className="font-body font-extrabold text-foreground text-3xl md:text-5xl leading-tight scroll-reveal">
           {t('Begin your journey with ', 'ابدأ رحلتك مع ')}
-          <span className="text-noorly-coral">{t('NooRly', 'نورلي')}</span>
+          <span className="text-noorly-orange">{t('NooRly', 'نورلي')}</span>
           {t(' today.', ' اليوم.')}
         </h2>
 
@@ -42,22 +42,24 @@ const DownloadSection: React.FC = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center scroll-reveal">
           <a
             href="#"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-noorly-surface rounded-lg border border-border hover:border-noorly-coral/30 hover:scale-[1.04] transition-all duration-200"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-white rounded-lg hover:scale-[1.04] transition-all duration-200"
+            style={{ color: 'hsl(var(--noorly-navy-deep))' }}
           >
             <span className="text-2xl">🍎</span>
             <div className="text-start">
-              <p className="text-xs text-noorly-text-3">{t('Download on the', 'حمّل من')}</p>
-              <p className="font-body font-bold text-foreground">{t('App Store', 'آب ستور')}</p>
+              <p className="text-xs opacity-60">{t('Download on the', 'حمّل من')}</p>
+              <p className="font-body font-bold">{t('App Store', 'آب ستور')}</p>
             </div>
           </a>
           <a
             href="#"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-noorly-surface rounded-lg border border-border hover:border-noorly-coral/30 hover:scale-[1.04] transition-all duration-200"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-lg text-white hover:scale-[1.04] transition-all duration-200"
+            style={{ background: 'hsl(var(--noorly-navy-mid))' }}
           >
             <span className="text-2xl">▶️</span>
             <div className="text-start">
-              <p className="text-xs text-noorly-text-3">{t('Get it on', 'حمّل من')}</p>
-              <p className="font-body font-bold text-foreground">{t('Google Play', 'جوجل بلاي')}</p>
+              <p className="text-xs text-white/60">{t('Get it on', 'حمّل من')}</p>
+              <p className="font-body font-bold">{t('Google Play', 'جوجل بلاي')}</p>
             </div>
           </a>
         </div>

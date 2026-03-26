@@ -36,7 +36,7 @@ const HelpSection: React.FC = () => {
   const { t } = useLang();
 
   return (
-    <section id="support" className="relative z-10 py-[120px] px-6 md:px-12">
+    <section id="support" className="relative z-10 py-[120px] px-6 md:px-12 pattern-stars8" style={{ background: 'hsl(var(--noorly-navy-deep))' }}>
       <div className="max-w-noorly mx-auto space-y-16">
         {/* Header */}
         <div className="text-center space-y-4 scroll-reveal">
@@ -60,10 +60,23 @@ const HelpSection: React.FC = () => {
           {situations.map((s, i) => (
             <div
               key={s.titleEn}
-              className="bg-noorly-surface rounded-lg p-6 border border-border hover:border-noorly-coral/30 hover:-translate-y-[3px] transition-all duration-300 scroll-reveal"
+              className="rounded-lg p-6 border-l-[3px] border-noorly-blue hover:-translate-y-[3px] transition-all duration-300 scroll-reveal"
+              style={{
+                background: 'hsl(var(--noorly-surface))',
+                borderTop: '1px solid rgba(59,130,246,0.1)',
+                borderRight: '1px solid rgba(59,130,246,0.1)',
+                borderBottom: '1px solid rgba(59,130,246,0.1)',
+              }}
               data-delay={String(i * 100)}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(201,168,76,0.4)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(59,130,246,0.1)';
+                e.currentTarget.style.borderLeftColor = 'hsl(217 91% 60%)';
+              }}
             >
-              <div className="w-12 h-12 rounded-lg bg-noorly-coral/10 flex items-center justify-center mb-4">
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style={{ background: 'rgba(27,79,168,0.3)' }}>
                 <span className="text-xl">{s.emoji}</span>
               </div>
               <h3 className="font-body font-bold text-foreground">{t(s.titleEn, s.titleAr)}</h3>

@@ -9,7 +9,6 @@ const features = [
         <path d="M8 7h8M8 11h5" />
       </svg>
     ),
-    colorVar: '--noorly-coral',
     en: '60-Day Journey',
     ar: 'رحلة ٦٠ يومًا',
     descEn: 'A structured path from your first day to spiritual confidence, one lesson at a time.',
@@ -22,7 +21,6 @@ const features = [
         <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
       </svg>
     ),
-    colorVar: '--noorly-purple',
     en: 'Daily Inspiration',
     ar: 'إلهام يومي',
     descEn: 'A Quran verse and reflection delivered every morning to nourish your soul.',
@@ -35,7 +33,6 @@ const features = [
         <path d="M12 8v4M12 16h.01" />
       </svg>
     ),
-    colorVar: '--noorly-green',
     en: 'Help Right Now',
     ar: 'المساعدة الفورية',
     descEn: 'Real guidance for real struggles. Doubt, family pressure, spiritual emptiness.',
@@ -48,7 +45,6 @@ const features = [
         <path d="M7 7h4v4H7zM13 7h4M13 11h4M7 15h10M7 19h6" />
       </svg>
     ),
-    colorVar: '--noorly-blue',
     en: 'Islamic Library',
     ar: 'المكتبة الإسلامية',
     descEn: '415+ duas, adhkar, Quran verses, and essential Islamic knowledge.',
@@ -60,7 +56,6 @@ const features = [
         <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
       </svg>
     ),
-    colorVar: '--noorly-coral',
     en: 'Ramadan Guide',
     ar: 'دليل رمضان',
     descEn: 'Your first Ramadan? We walk you through fasting, taraweeh, and more.',
@@ -73,7 +68,6 @@ const features = [
         <path d="M13.73 21a2 2 0 01-3.46 0" />
       </svg>
     ),
-    colorVar: '--noorly-gold',
     en: 'Smart Reminders',
     ar: 'تذكيرات ذكية',
     descEn: 'Gentle nudges for prayer, daily lessons, and Quran reading.',
@@ -85,11 +79,11 @@ const FeaturesSection: React.FC = () => {
   const { t } = useLang();
 
   return (
-    <section id="features" className="relative z-10 py-[120px] px-6 md:px-12">
+    <section id="features" className="relative z-10 py-[120px] px-6 md:px-12 pattern-girih" style={{ background: 'hsl(var(--noorly-navy-deep))' }}>
       <div className="max-w-noorly mx-auto space-y-16">
         {/* Header */}
         <div className="text-center space-y-4 scroll-reveal">
-          <span className="text-noorly-coral text-sm font-medium tracking-wide">
+          <span className="text-noorly-blue text-sm font-medium tracking-wide">
             {t('✦ Features ✦', '✦ المميزات ✦')}
           </span>
           <h2 className="font-body font-extrabold text-foreground text-3xl md:text-4xl leading-tight">
@@ -100,28 +94,22 @@ const FeaturesSection: React.FC = () => {
         </div>
 
         {/* Grid */}
-        <div className="grid md:grid-cols-3 grid-cols-1 border border-border rounded-lg overflow-hidden">
+        <div className="grid md:grid-cols-3 grid-cols-1 border rounded-lg overflow-hidden" style={{ borderColor: 'rgba(59,130,246,0.15)' }}>
           {features.map((f, i) => (
             <div
               key={f.en}
-              className="p-8 border-b border-e border-border hover:bg-noorly-surface-2 transition-colors duration-300 scroll-reveal"
+              className="p-8 hover:bg-noorly-surface-2 transition-colors duration-300 scroll-reveal"
+              style={{
+                background: 'hsl(var(--noorly-surface))',
+                borderBottom: '1px solid rgba(59,130,246,0.1)',
+                borderRight: '1px solid rgba(59,130,246,0.1)',
+              }}
               data-delay={String(i * 100)}
             >
               <div
-                className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
+                className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-noorly-blue"
                 style={{
-                  background: `hsl(${f.colorVar === '--noorly-coral' ? 'var(--noorly-coral)' :
-                    f.colorVar === '--noorly-purple' ? 'var(--noorly-purple)' :
-                    f.colorVar === '--noorly-green' ? 'var(--noorly-green)' :
-                    f.colorVar === '--noorly-blue' ? 'var(--noorly-blue)' :
-                    f.colorVar === '--noorly-gold' ? 'var(--noorly-gold)' :
-                    'var(--noorly-coral)'} / 0.12)`,
-                  color: `hsl(${f.colorVar === '--noorly-coral' ? 'var(--noorly-coral)' :
-                    f.colorVar === '--noorly-purple' ? 'var(--noorly-purple)' :
-                    f.colorVar === '--noorly-green' ? 'var(--noorly-green)' :
-                    f.colorVar === '--noorly-blue' ? 'var(--noorly-blue)' :
-                    f.colorVar === '--noorly-gold' ? 'var(--noorly-gold)' :
-                    'var(--noorly-coral)'})`
+                  background: 'rgba(27,79,168,0.3)',
                 }}
               >
                 {f.icon}

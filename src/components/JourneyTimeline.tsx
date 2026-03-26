@@ -8,7 +8,7 @@ const timelineItems = [
     weeksAr: 'الأسبوع ١–٢',
     daysAr: 'الأيام ١–١٤',
     emoji: '🌱',
-    colorVar: 'noorly-coral',
+    colorHex: '#F5A623',
     titleEn: 'Foundations',
     titleAr: 'الأساسيات',
     descEn: 'Who is Allah? Understanding Iman, the Shahada, and Allah\'s infinite mercy.',
@@ -23,7 +23,7 @@ const timelineItems = [
     weeksAr: 'الأسبوع ٣–٤',
     daysAr: 'الأيام ١٥–٢٨',
     emoji: '🕌',
-    colorVar: 'noorly-blue',
+    colorHex: '#1B4FA8',
     titleEn: 'Prayer & Stability',
     titleAr: 'الصلاة والاستقرار',
     descEn: 'Wudu, Salah, connecting with the Quran, and daily Dhikr.',
@@ -38,7 +38,7 @@ const timelineItems = [
     weeksAr: 'الأسبوع ٥–٦',
     daysAr: 'الأيام ٢٩–٤٢',
     emoji: '📖',
-    colorVar: 'noorly-purple',
+    colorHex: '#3B82F6',
     titleEn: 'Quran & Spiritual Life',
     titleAr: 'القرآن والحياة الروحية',
     descEn: 'Fasting, Zakat, Hajj, Tawakkul, and deepening your relationship with Allah.',
@@ -53,7 +53,7 @@ const timelineItems = [
     weeksAr: 'الأسبوع ٧–٩',
     daysAr: 'الأيام ٤٣–٦٠',
     emoji: '📿',
-    colorVar: 'noorly-gold',
+    colorHex: '#C9A84C',
     titleEn: 'Living Islam',
     titleAr: 'العيش في الإسلام',
     descEn: 'Honesty, mercy, humility, balance. Carrying Islam into every part of your life.',
@@ -68,18 +68,18 @@ const JourneyTimeline: React.FC = () => {
   const { t } = useLang();
 
   return (
-    <section id="journey" className="relative z-10 py-[120px] px-6 md:px-12">
+    <section id="journey" className="relative z-10 py-[120px] px-6 md:px-12 section-light">
       <div className="max-w-noorly mx-auto space-y-16">
         {/* Header */}
         <div className="text-center space-y-4 scroll-reveal">
-          <span className="text-noorly-coral text-sm font-medium tracking-wide">
+          <span className="text-noorly-blue text-sm font-medium tracking-wide">
             {t('✦ The 60-Day Path ✦', '✦ مسار الستين يومًا ✦')}
           </span>
-          <h2 className="font-body font-extrabold text-foreground text-3xl md:text-4xl leading-tight">
+          <h2 className="font-body font-extrabold text-3xl md:text-4xl leading-tight" style={{ color: 'hsl(var(--noorly-navy-deep))' }}>
             {t('Your journey, ', 'رحلتك، ')}
-            <span className="text-noorly-coral">{t('beautifully mapped.', 'مرسومة بجمال.')}</span>
+            <span className="text-noorly-orange">{t('beautifully mapped.', 'مرسومة بجمال.')}</span>
           </h2>
-          <p className="text-noorly-text-2 max-w-lg mx-auto">
+          <p className="text-noorly-light-muted max-w-lg mx-auto">
             {t(
               'A structured 60-day path from your first steps to living Islam with confidence.',
               'مسار منظم من ٦٠ يومًا من خطواتك الأولى إلى العيش بالإسلام بثقة.'
@@ -89,12 +89,12 @@ const JourneyTimeline: React.FC = () => {
 
         {/* Timeline */}
         <div className="relative">
-          {/* Center line - stops at last card */}
+          {/* Center line */}
           <div className="absolute left-4 md:left-1/2 top-0 w-px md:-translate-x-px overflow-hidden" style={{ height: 'calc(100% - 200px)' }}>
             <div
               className="w-full h-full"
               style={{
-                background: 'linear-gradient(to bottom, hsl(var(--noorly-coral)), hsl(var(--noorly-blue)), hsl(var(--noorly-purple)), hsl(var(--noorly-gold)), transparent)',
+                background: 'linear-gradient(to bottom, #1B4FA8, #3B82F6, #C9A84C, transparent)',
               }}
             />
           </div>
@@ -115,15 +115,15 @@ const JourneyTimeline: React.FC = () => {
                     <div
                       className="absolute inset-0 rounded-full animate-breathe"
                       style={{
-                        background: `radial-gradient(circle, hsl(var(--${item.colorVar}) / 0.3), transparent 70%)`,
+                        background: `radial-gradient(circle, ${item.colorHex}33, transparent 70%)`,
                         transform: 'scale(3)',
                       }}
                     />
                     <div
-                      className="relative w-12 h-12 rounded-full bg-noorly-surface border-2 flex items-center justify-center"
+                      className="relative w-12 h-12 rounded-full bg-white flex items-center justify-center"
                       style={{
-                        borderColor: `hsl(var(--${item.colorVar}))`,
-                        boxShadow: `0 0 24px hsl(var(--${item.colorVar}) / 0.5)`,
+                        border: `2px solid ${item.colorHex}`,
+                        boxShadow: `0 0 24px ${item.colorHex}55`,
                       }}
                     >
                       <span className="text-xl">{item.emoji}</span>
@@ -137,35 +137,33 @@ const JourneyTimeline: React.FC = () => {
                     }`}
                   >
                     <div
-                      className="group bg-noorly-surface rounded-2xl p-6 border border-border hover:border-foreground/15 transition-all duration-500 hover:-translate-y-1"
-                      style={{
-                        boxShadow: `0 0 0 0 hsl(var(--${item.colorVar}) / 0)`,
-                      }}
+                      className="group bg-white rounded-2xl p-6 border hover:-translate-y-1 transition-all duration-500"
+                      style={{ borderColor: 'rgba(27,79,168,0.15)' }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.boxShadow = `0 8px 32px hsl(var(--${item.colorVar}) / 0.15)`;
+                        e.currentTarget.style.boxShadow = `0 8px 32px ${item.colorHex}22`;
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.boxShadow = `0 0 0 0 hsl(var(--${item.colorVar}) / 0)`;
+                        e.currentTarget.style.boxShadow = 'none';
                       }}
                     >
                       {/* Week badge */}
                       <div className="flex items-center gap-2 mb-3">
                         <span
-                          className="inline-flex items-center px-3 py-1 rounded-pill text-xs font-medium text-foreground"
-                          style={{ background: `hsl(var(--${item.colorVar}) / 0.15)` }}
+                          className="inline-flex items-center px-3 py-1 rounded-pill text-xs font-medium text-white"
+                          style={{ background: '#1B4FA8' }}
                         >
                           {t(item.weeks, item.weeksAr)}
                         </span>
-                        <span className="text-xs text-noorly-text-3">
+                        <span className="text-xs text-noorly-light-muted">
                           {t(item.days, item.daysAr)}
                         </span>
                       </div>
 
-                      <h3 className="font-body font-bold text-foreground text-xl">
+                      <h3 className="font-body font-bold text-xl" style={{ color: 'hsl(var(--noorly-navy-deep))' }}>
                         {t(item.titleEn, item.titleAr)}
                       </h3>
 
-                      <p className="text-noorly-text-2 text-sm mt-2 leading-relaxed">
+                      <p className="text-noorly-light-muted text-sm mt-2 leading-relaxed">
                         {t(item.descEn, item.descAr)}
                       </p>
 
@@ -174,7 +172,8 @@ const JourneyTimeline: React.FC = () => {
                         {(t(item.topics.join(','), item.topicsAr.join(','))).split(',').map((topic) => (
                           <span
                             key={topic}
-                            className="px-2.5 py-0.5 rounded-pill text-[11px] text-noorly-text-2 border border-border"
+                            className="px-2.5 py-0.5 rounded-pill text-[11px] text-noorly-light-muted"
+                            style={{ border: '1px solid rgba(27,79,168,0.2)' }}
                           >
                             {topic}
                           </span>
@@ -183,16 +182,16 @@ const JourneyTimeline: React.FC = () => {
 
                       {/* Mini progress */}
                       <div className="mt-4 flex items-center gap-3">
-                        <div className="flex-1 h-1 bg-foreground/10 rounded-full overflow-hidden">
+                        <div className="flex-1 h-1 rounded-full overflow-hidden" style={{ background: 'rgba(27,79,168,0.1)' }}>
                           <div
                             className="h-full rounded-full transition-all duration-700"
                             style={{
                               width: `${item.progress}%`,
-                              background: `linear-gradient(90deg, hsl(var(--${item.colorVar})), hsl(var(--${item.colorVar}) / 0.5))`,
+                              background: `linear-gradient(90deg, ${item.colorHex}, ${item.colorHex}88)`,
                             }}
                           />
                         </div>
-                        <span className="text-[10px] text-noorly-text-3 font-medium">
+                        <span className="text-[10px] text-noorly-light-muted font-medium">
                           {item.progress}%
                         </span>
                       </div>
@@ -208,31 +207,29 @@ const JourneyTimeline: React.FC = () => {
 
           {/* Final stage marker */}
           <div className="relative flex flex-col items-center mt-14 scroll-reveal">
-            {/* Dot on the line */}
             <div className="relative z-10 mb-6">
               <div
                 className="absolute inset-0 rounded-full animate-breathe"
                 style={{
-                  background: 'radial-gradient(circle, hsl(var(--noorly-gold) / 0.2), transparent 70%)',
+                  background: 'radial-gradient(circle, rgba(201,168,76,0.2), transparent 70%)',
                   transform: 'scale(4)',
                 }}
               />
               <div
-                className="relative w-14 h-14 rounded-full bg-noorly-surface border-2 border-noorly-gold flex items-center justify-center"
+                className="relative w-14 h-14 rounded-full bg-white border-2 border-noorly-gold flex items-center justify-center"
                 style={{
-                  boxShadow: '0 0 24px hsl(var(--noorly-gold) / 0.4)',
+                  boxShadow: '0 0 24px rgba(201,168,76,0.4)',
                 }}
               >
                 <span className="text-2xl">☪️</span>
               </div>
             </div>
 
-            {/* Text */}
             <div className="text-center space-y-2">
-              <p className="font-body font-extrabold text-foreground text-xl tracking-tight">
+              <p className="font-body font-extrabold text-xl tracking-tight" style={{ color: 'hsl(var(--noorly-navy-deep))' }}>
                 {t('Your new life begins', 'حياتك الجديدة تبدأ')}
               </p>
-              <p className="text-noorly-text-2 text-sm max-w-sm mx-auto leading-relaxed">
+              <p className="text-noorly-light-muted text-sm max-w-sm mx-auto leading-relaxed">
                 {t(
                   'Day 60 is not the end. It\'s the beginning of a lifetime of faith.',
                   'اليوم الستون ليس النهاية. إنه بداية حياة كاملة من الإيمان.'

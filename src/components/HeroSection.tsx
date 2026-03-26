@@ -6,19 +6,29 @@ const HeroSection: React.FC = () => {
   const { t, lang } = useLang();
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-20 pb-12 geometric-pattern overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-20 pb-12 pattern-stars8 overflow-hidden"
+      style={{ background: 'hsl(var(--noorly-navy-deep))' }}
+    >
+      {/* Gold arcs */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[900px] h-[300px] pointer-events-none opacity-[0.06]">
+        <svg viewBox="0 0 900 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="450" cy="300" rx="400" ry="200" stroke="#C9A84C" strokeWidth="1" />
+          <ellipse cx="450" cy="300" rx="300" ry="150" stroke="#C9A84C" strokeWidth="0.5" />
+        </svg>
+      </div>
+
       <div className="max-w-noorly mx-auto flex flex-col items-center text-center z-10 space-y-8">
         {/* Eyebrow */}
         <div
           className="inline-flex items-center gap-2 px-5 py-2 rounded-pill border"
           style={{
-            background: 'rgba(167,139,250,0.12)',
-            borderColor: 'rgba(167,139,250,0.25)',
+            background: 'rgba(59,130,246,0.12)',
+            borderColor: 'rgba(59,130,246,0.25)',
             animation: 'fadeUp 0.8s 0s ease both',
           }}
         >
-          <span className="w-2 h-2 rounded-full bg-noorly-purple animate-breathe" />
-          <span className="text-noorly-purple text-sm font-medium">
+          <span className="w-2 h-2 rounded-full bg-noorly-blue animate-breathe" />
+          <span className="text-noorly-blue text-sm font-medium">
             {t('✦ A Companion for New Muslims ✦', '✦ رفيق المسلمين الجدد ✦')}
           </span>
         </div>
@@ -57,13 +67,13 @@ const HeroSection: React.FC = () => {
         >
           <a
             href="#download"
-            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-base font-medium bg-noorly-coral text-foreground rounded-pill transition-all duration-200 hover:scale-[1.04]"
+            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-base font-medium bg-noorly-orange text-noorly-navy-deep rounded-pill transition-all duration-200 hover:scale-[1.04]"
           >
             <span>🌙</span> {t('Start Your Journey', 'ابدأ رحلتك')}
           </a>
           <a
             href="#features"
-            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-base font-medium text-foreground rounded-pill border border-foreground/20 transition-all duration-200 hover:border-foreground/40 hover:scale-[1.04]"
+            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-base font-medium text-foreground rounded-pill border border-noorly-orange/30 transition-all duration-200 hover:border-noorly-orange/60 hover:scale-[1.04]"
           >
             {t('Explore Features →', '← استكشف المميزات')}
           </a>

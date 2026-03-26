@@ -31,8 +31,8 @@ const seasons: Record<number, SeasonData> = {
   },
   7: {
     icon: '✨',
-    color: '#A78BFA',
-    glowColor: 'rgba(167,139,250,0.10)',
+    color: '#3B82F6',
+    glowColor: 'rgba(59,130,246,0.10)',
     badge_en: 'Sacred Month · Rajab',
     badge_ar: 'الشهر الحرام · رجب',
     title_en: 'Rajab & the Night Journey',
@@ -44,8 +44,8 @@ const seasons: Record<number, SeasonData> = {
   },
   8: {
     icon: '🌙',
-    color: '#A78BFA',
-    glowColor: 'rgba(167,139,250,0.10)',
+    color: '#3B82F6',
+    glowColor: 'rgba(59,130,246,0.10)',
     badge_en: "Ramadan is coming · Sha'ban",
     badge_ar: 'رمضان قادم · شعبان',
     title_en: 'Prepare for Your First Ramadan',
@@ -57,8 +57,8 @@ const seasons: Record<number, SeasonData> = {
   },
   9: {
     icon: '🌙',
-    color: '#A78BFA',
-    glowColor: 'rgba(167,139,250,0.12)',
+    color: '#3B82F6',
+    glowColor: 'rgba(59,130,246,0.12)',
     badge_en: 'Ramadan is here',
     badge_ar: 'رمضان كريم',
     title_en: 'Your First Ramadan Guide',
@@ -70,8 +70,8 @@ const seasons: Record<number, SeasonData> = {
   },
   10: {
     icon: '🎉',
-    color: '#F59E0B',
-    glowColor: 'rgba(245,158,11,0.10)',
+    color: '#C9A84C',
+    glowColor: 'rgba(201,168,76,0.10)',
     badge_en: 'Eid Mubarak 🎊',
     badge_ar: 'عيد مبارك 🎊',
     title_en: 'Your First Eid al-Fitr',
@@ -96,8 +96,8 @@ const seasons: Record<number, SeasonData> = {
   },
   12: {
     icon: '🕋',
-    color: '#F59E0B',
-    glowColor: 'rgba(245,158,11,0.12)',
+    color: '#C9A84C',
+    glowColor: 'rgba(201,168,76,0.12)',
     badge_en: 'Hajj Season is here',
     badge_ar: 'موسم الحج',
     title_en: 'The Season of Hajj & Dhul Hijjah',
@@ -142,7 +142,7 @@ const SeasonalSection: React.FC = () => {
       <div
         className="max-w-[900px] mx-auto rounded-3xl p-10 md:p-12 border relative overflow-hidden scroll-reveal"
         style={{
-          background: `hsl(var(--noorly-surface))`,
+          background: 'hsl(var(--noorly-surface))',
           borderColor: `${season.color}40`,
         }}
       >
@@ -182,7 +182,7 @@ const SeasonalSection: React.FC = () => {
           </div>
 
           {/* Icon side */}
-          <div className="hidden md:flex items-center justify-center w-32 h-32 text-7xl geometric-pattern rounded-2xl shrink-0">
+          <div className="hidden md:flex items-center justify-center w-32 h-32 text-7xl pattern-girih rounded-2xl shrink-0">
             {season.icon}
           </div>
         </div>

@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   const { t } = useLang();
 
   return (
-    <footer className="relative z-10 border-t border-border py-10 px-6 md:px-12">
+    <footer className="relative z-10 py-10 px-6 md:px-12" style={{ background: 'hsl(var(--noorly-footer))', borderTop: '1px solid rgba(201,168,76,0.15)' }}>
       <div className="max-w-noorly mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-noorly-text-3 text-sm">
         {/* Logo */}
         <div className="flex items-center gap-2">
