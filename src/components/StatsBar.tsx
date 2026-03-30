@@ -20,7 +20,7 @@ const StatItem: React.FC<{ value: number; label: string; arLabel: string }> = ({
 const StatsBar: React.FC = () => {
   const stats = [
     { value: 60, label: 'Day Journey', arLabel: 'رحلة ٦٠ يومًا' },
-    { value: 415, label: 'Library Items', arLabel: 'أذكار وأدعية وآيات' },
+    { value: 215, label: 'Library Items', arLabel: 'أذكار وأدعية وآيات' },
     { value: 30, label: 'Help Situations', arLabel: 'موقف دعم فوري' },
     { value: 2, label: 'Languages', arLabel: 'عربي + إنجليزي' },
   ];
